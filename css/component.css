@@ -48,16 +48,16 @@
 	transition-delay: 0s;
 }
 
-#about:hover h3,
-#about:hover span {
+#nav-about:hover h3,
+#nav-about:hover span {
 	color: #ce616e;
 }
-#projects:hover h3,
-#projects:hover span {
+#nav-projects:hover h3,
+#nav-projects:hover span {
 	color: #10b256;
 }
-#experience:hover h3,
-#experience:hover span {
+#nav-experience:hover h3,
+#nav-experience:hover span {
 	color: #3498DB;
 }
 
@@ -150,6 +150,12 @@
 	font-weight: 300;
 	letter-spacing: 3px;
 }
+.content h5{
+	font-size:9px;
+	text-transform:uppercase;
+	font-weight: 400;
+	letter-spacing: 3px;
+}
 
 .content {
 	color:#2c3e50;
@@ -178,11 +184,15 @@
 	line-height: 1.5;
 }
 
+.content ul{
+	list-style:none;
+	margin:0 auto;
+	padding:0;
+}
+
 #contact ul{
 	padding:10px 0;
 	width:230px;
-	margin:0 auto;
-	list-style: none;
 }
 #contact li{
 	font-size:10px;
@@ -197,6 +207,21 @@
 	cursor:pointer;
 	color:#95a5a6;
 	text-decoration: underline;
+}
+
+#languages ul{
+	width:150px;
+}
+#languages li{
+	color:#7f7c85;
+	font-size:12px;
+}
+
+.percentage{
+	color:#ce616e;
+	opacity:0.7;
+	margin-left:50px;
+	float:right;
 }
 
 .linesep {

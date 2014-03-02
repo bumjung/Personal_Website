@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Bumjung Kim - Personal Website</title>
 		<meta name="keywords" content="bumjung, bumjung kim, paul kim, waterloo software engineering" />
-		<meta name="author" content="Paul" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		
 		<!-- BOOTSTRAP v3.1 -->
@@ -31,10 +30,10 @@
 			<header class="header">
 				<h1 style="font-size:40px;">BUMJUNG 'PAUL' KIM <span>SOFTWARE ENGINEERING '17</span></h1>
 			</header>
-			<section>
+			<section id="nav">
 				<div class="row">
 					<div class="col-md-4" style="padding:0;">
-					<div class="box" id="about">
+					<div class="box" id="nav-about">
 						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
 							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
@@ -47,7 +46,7 @@
 					</div>
 					</div>
 					<div class="col-md-4" style="padding:0">
-					<div class="box" id="projects">
+					<div class="box" id="nav-projects">
 						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
 							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
@@ -60,7 +59,7 @@
 					</div>
 					</div>
 					<div class="col-md-4" style="padding:0">
-					<div class="box" id="experience">
+					<div class="box" id="nav-experience">
 						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
 							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
@@ -74,7 +73,7 @@
 					</div>
 				</div><!-- /grid -->
 			</section>
-			<section>
+			<section id="about">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="content-header">
@@ -87,6 +86,41 @@
 						<div class="content">
 							<h3 style="padding-bottom:80px">The possibilities are endless once we act</h3>
 							<p>I am currently attending University of Waterloo and majoring in Software Engineering Co-op (currently in my second year). Software engineering is a systematic and disciplined approach to developing software. It applies both computer science and engineering principles and practices to the creation, process, and maintenance of software systems. This website is designed to showcase me, as a person, student and as a professional. You are always welcome to contact me, let's chat!</p>
+							<span class="linesep"></span>
+							<div class="row" id="languages">
+								<div class="col-md-offset-2 col-md-4">
+									<h3>Software development</h3>
+									<ul>
+										<li>Java<span class="percentage">60%</span></li>
+										<li>C++<span class="percentage">50%</span></li>
+										<li>C<span class="percentage">50%</span></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3>Web<br/>development</h3>
+									<ul>
+										<li>HTML<span class="percentage">90%</span></li>
+										<li>CSS<span class="percentage">85%</span></li>
+										<li>Javascript<span class="percentage">50%</span></li>
+										<li>Jquery<span class="percentage">50%</span></li>
+										<li>Django<span class="percentage">50%</span></li>
+										<li>D3.js<span class="percentage">40%</span></li>
+										<li>Python<span class="percentage">30%</span></li>
+										<li>Coldfusion<span class="percentage">30%</span></li>
+									</ul>
+								</div>
+							</div>
+							
+							<span class="linesep"></span>
+							<h3>Education</h3>
+							<h4>University of Waterloo</h4>
+							<h5>Bachelor of <span style="color:#ce616e;">Software Engineering</span> (BSE)</h5>
+							<p style="font-weight:300">Data Structures and Data Management
+								<br/>Foundations of Sequential Programs (MIPS, ARMS)
+								<br/>Programming Principles (C)
+								<br/>Data Abstraction and Implementation (Unix, C++)
+								<br/>Methods of Software Engineering(Python)
+								Digital Circuits (VHDL)</p>
 							<span class="linesep"></span>
 							<div id="contact">
 								<h3>CONTACT</h3>
@@ -118,7 +152,7 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section id="projects">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="content-header">
@@ -131,12 +165,14 @@
 						<div class="content">
 							<h3>Steam Account Summary</h3>
 							<h4>python + django</h4>
+							<h5 style="color:#10b256;">in development</h5>
 							<p>Used Steam API to extract user data from JSON files.
 								<br/>Developed and designed the web application using Django framework.
 								<br/>Implemented multi-processing methodology to decrease URL request performance by 85%.</p>
 							
 							<h3>Website Ranking System</h3>
 							<h4>php + d3.js</h4>
+							<h5 style="color:#10b256;">in development</h5>
 							<p>Contributed to back-end development for a SEO tool that gathers data on a certain site from different search pages.
 							<br/>Implemented alorgorithm that returns a summary of search results.
 							<br/>Built the visual charts and graphs on the result page using D3 JQuery plugin.</p>
@@ -147,11 +183,20 @@
 							<br/>Enhanced user experience by simplifying design and implemented smooth transitions between pages.
 							<br/>Developed a self-organizing and maintaing PHP engine to store contact information.
 							<br/>Implemented a grid system to maintain solid structure and visual balance of the website.</p>
+							
+							<h3>Tower Defence</h3>
+							<h4>Java</h4>
+							<p>Used Object-Oriented Programming methodology to design a single-player tower defense game.
+							<br/>Implemented board structure and path finding algorithm for enemy AI.</p>
+							<span class="linesep"></span>
+							<h3>DogeCoin Mining Rig Project</h3>
+							<h4>Hardware</h4>
+							<p>Currently mining away.</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section>
+			<section id="experience">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="content-header">
@@ -164,8 +209,8 @@
 						<div class="content">
 							<h3>Web Developer</h3>
 							<h4>WatrHub Inc.</h4>
-							<p><span style="color:#ccc"><<&nbsp;&nbsp;&nbsp;CURRENT EMPLOYMENT&nbsp;&nbsp;&nbsp;>></span></p>
-
+							<p><span style="font-size:12px; opacity:0.6; color:#3498DB">&lsaquo;&lsaquo;&nbsp;&nbsp;&nbsp;CURRENT EMPLOYMENT&nbsp;&nbsp;&nbsp;&rsaquo;&rsaquo;</span></p>
+							<span class="linesep"></span>
 							<h3>Web Application Developer</h3>
 							<h4>Public Works and Government Services Canada</h4>
 							<p>Engaged in agile software development working on two major projects for government clients, OSME and THS.
