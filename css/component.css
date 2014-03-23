@@ -80,13 +80,13 @@
 	transition-delay: 0.1s;
 }
 
-#about:hover svg line {
+#nav-about:hover svg line {
 	stroke: #ce616e;
 }
-#projects:hover svg line {
+#nav-projects:hover svg line {
 	stroke: #10b256;
 }
-#experience:hover svg line {
+#nav-experience:hover svg line {
 	stroke: #3498DB;
 }
 
@@ -151,6 +151,12 @@
 	letter-spacing: 3px;
 }
 .content h5{
+	font-size:9px;
+	text-transform:uppercase;
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+.content a{
 	font-size:9px;
 	text-transform:uppercase;
 	font-weight: 400;
