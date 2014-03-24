@@ -157,7 +157,7 @@
 	letter-spacing: 3px;
 }
 .content a{
-	font-size:9px;
+	font-size:11px;
 	text-transform:uppercase;
 	font-weight: 400;
 	letter-spacing: 3px;
@@ -198,7 +198,8 @@
 
 #contact ul{
 	padding:10px 0;
-	width:230px;
+	width:275px;
+	padding-left:20px;
 }
 #contact li{
 	font-size:10px;
@@ -213,6 +214,17 @@
 	cursor:pointer;
 	color:#95a5a6;
 	text-decoration: underline;
+}
+
+#projects h5{
+	color:#10b256;
+}
+#projects a{
+	color:inherit;
+}
+
+#projects a:hover{
+	color:#10b256;
 }
 
 #languages ul{
