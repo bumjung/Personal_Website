@@ -136,7 +136,7 @@
 	padding:0;
 	padding-top:75px;
 }
-.content h3{
+.content h3,#projects a{
 	font-size:24px;
 	text-transform:uppercase;
 	padding:10px 0;
@@ -248,4 +248,15 @@
 	width: 50%;
 	display: block;
 	margin: 50px auto;
+}
+
+.go_top{
+	color: #95a5a6;
+	visibility:hidden;
+}
+.go_top:hover{
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+	color:#fff;
+	cursor:pointer;
 }

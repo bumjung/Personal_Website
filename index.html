@@ -56,7 +56,7 @@
 	     
 	</head>
 	<body style="margin:3px; border: 1px solid #fff;">
-		<div class="container">
+		<div class="container" style="height:100%;">
 			<header class="header">
 				<h1 style="font-size:40px;">BUMJUNG 'PAUL' KIM <span>SOFTWARE ENGINEERING '17</span></h1>
 			</header>
@@ -131,11 +131,11 @@
 									<ul>
 										<li>HTML<span class="percentage">90%</span></li>
 										<li>CSS<span class="percentage">85%</span></li>
+										<li>NVD3.js<span class="percentage">70%</span></li>
 										<li>Javascript<span class="percentage">50%</span></li>
 										<li>Jquery<span class="percentage">50%</span></li>
 										<li>Django<span class="percentage">50%</span></li>
-										<li>D3.js<span class="percentage">40%</span></li>
-										<li>Python<span class="percentage">30%</span></li>
+										<li>Python<span class="percentage">50%</span></li>
 										<li>Coldfusion<span class="percentage">30%</span></li>
 									</ul>
 								</div>
@@ -202,20 +202,30 @@
 							<br/>Implemented alorgorithm that returns a summary of search results.
 							<br/>Buil visual charts and graphs on the result page using D3 JQuery plugin.</p>-->
 							
+							<h3>Page Rank</h3>
+							<h4>python + django + nvd3.js</h4>
+							<h5>Under Development</h5>
+							<p>
+								Implemented a crawler that scrapes through top 10 result links from Google, Yahoo, Bing, and Ask and compares them to user's URL.
+								<br/>Display results using NVD3.js to show the rank of user's URL, given a query keyword.
+							</p>
+
+							<h3><a href="http://steamize.bumjung.com/summary" target="_blank">Steamize (Steam Account Summary)</a></h3>
+							<h4>python + django + mongodb + nvd3.js</h4>
+							<h5>Launched on 03.29.14</h5>
+							<p>Used Steam API to extract user data from JSON files.
+								<br/>Developed and designed the web application using Django framework.
+								<br/>Implemented multi-processing methodology to increase URL request performance by 85%.
+								<br/>Implemented MongoDB and caching to increase load performance drastically.
+								<br/>Integrated NVD3.js to assist users visualize plain data
+							</p>
+
 							<h3><a href="http://timesine.bumjung.com" target="_blank">Time and Sine</a></h3>
 							<h4>node.js + socket.io + express + NVD3.js</h4>
 							<h5>Launched on 03.21.14</h5>
 							<p>Extended Javascript Array object method 'push' to maintain fixed-length queues.
 								<br/>Implemented Socket.IO to create and emit realtime data from the server to the client side.
 								<br/>Developed dynamic and interactive data graph using NVD3.js.</p>
-							
-							
-							<h3>Steam Account Summary</h3>
-							<h4>python + django</h4>
-							<h5>in development</h5>
-							<p>Used Steam API to extract user data from JSON files.
-								<br/>Developed and designed the web application using Django framework.
-								<br/>Implemented multi-processing methodology to increase URL request performance by 85%.</p>
 							
 							<h3><a href="http://bumjung.com">Personal Website</a></h3>
 							<h4>html5 + css3 + jquery</h4>
@@ -266,6 +276,7 @@
 				<span style="font-size: 10px;letter-spacing: 1px; font-weight: 400; text-transform: uppercase;font-family: 'Lato', Arial, sans-serif!important; color:#65626b;">© 2014 All content is the copyright of it's respective owners. 
 				<br/>Developed by <a href="http://bumjung.com" style="color:#ccc">Paul Kim.</a> Launched on 03.02.14</span>
 			</section>
+				<div class="go_top" style="background-color:#354b60;position:fixed; bottom:20px; padding:10px; height:50px; right:70px;"><span class="glyphicon glyphicon-chevron-up" style="font-size:20px;"></span> <span style="font-size:10px;">Return to top of the page</span></div></a>
 		</div><!-- /container -->
 	</body>
 </html>
