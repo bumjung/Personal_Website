@@ -1,0 +1,88 @@
+@background: #1695A3;
+@header: #fff;
+@darkGrey: #333;
+html, body{
+	height:100%;
+}
+
+body {
+ 	background-color: @background;
+ 	&::before {
+	  background-color: @header;
+	  content: " ";
+	  height: 100%;
+	  position: fixed;
+	  width: 5%;
+	}
+
+	font-family: Roboto;
+}
+
+.arrow-right {
+	width: 0; 
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #ED6743;
+	display: none;
+	margin-right:5px;
+	position:relative;
+	top: 1px;
+}
+
+.header {
+	&.skew{
+		  -webkit-transform: skew(-5deg);
+		  transform: skewx(-5deg);
+		  -webkit-box-shadow: 0 0 1px @header;
+		  -o-box-shadow: none;
+	}
+
+	h2, label{
+		-webkit-transform: skewx(5deg);
+	    transform: skewx(5deg);
+	}
+
+	h2 {
+  		font-size: 35px;
+  		letter-spacing: 2px;
+  		text-transform: uppercase;
+  		margin-bottom:0;
+	}
+
+	label {
+		font-size:15px;
+		margin-left:5px;
+	}
+
+	ul{
+	    li {
+	    	&.active .arrow-right {
+	    		display: inline-block;
+	    	}
+	    	label {
+	    		padding: 0 0 0 15px;
+	    		font-size:20px;
+	    	}
+
+	    	padding:15px 0 15px 0px;
+	    	width:100%;
+	    	border-bottom:2px solid @header;
+	    }
+	    list-style: none;
+	    position:relative;
+	    font-size:20px;
+	    margin-top:55px;
+	    margin-left:30px;
+	}
+
+	height: 100%;
+	width: 25%;
+  	padding: 5% 0% 10% 8%;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	background-color:@header;
+  	color: @darkGrey;
+}
+
