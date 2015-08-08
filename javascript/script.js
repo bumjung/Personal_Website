@@ -8,9 +8,9 @@ $(document).ready(function(){
 	}
 
 	var imageMap = {
-		'aboutMe' : 'bg69.jpg',
+		'aboutMe' : 'bg62.jpg',
 		'projects' : 'bg23.jpg',
-		'experiences' : 'bg45.jpg'
+		'experiences' : 'bg41.jpg'
 	}
 
 	var fadeInMap = {
@@ -66,6 +66,13 @@ $(document).ready(function(){
 				});
 		}
 	}
+
+	var imgArr = $.map(imageMap, function(v) {
+		return v;
+	});
+
+	console.log(imgArr);
+	preload(imgArr);
 
 	fadeInMap['aboutMe']();
 
@@ -129,3 +136,10 @@ function handleImageLoading(imageMap, newSection) {
 			.fadeTo('slow', 1);
 	}
 }
+
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
