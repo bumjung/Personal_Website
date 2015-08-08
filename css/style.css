@@ -104,10 +104,11 @@ body {
 }
 .mainContainer .contentContainer .aboutMe .content h3 {
   letter-spacing: 1px;
-  width: 250px;
+  width: 50%;
 }
 .mainContainer .contentContainer .aboutMe .content p {
-  width: 300px;
+  display: inline-block;
+  width: 45%;
 }
 .mainContainer .contentContainer .aboutMe .content,
 .mainContainer .contentContainer .experiences .content {
@@ -129,6 +130,7 @@ body {
   bottom: 30px;
   display: inline-block;
   width: calc(50% - 30px);
+  margin: 20px 0 0 0;
 }
 .mainContainer .contentContainer .projects .proj .tech {
   letter-spacing: 0.1px;
