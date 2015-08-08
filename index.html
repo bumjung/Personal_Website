@@ -8,31 +8,94 @@
 		<link type="text/css" rel="stylesheet" href="css/normalize.css">
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<meta name="keywords" content="bumjung, bumjung kim, paul kim, waterloo software engineering" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-
-	<!-- End Inspectlet Embed Code -->
-	      <script>
-	          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	        
-	          ga('create', 'UA-44477908-1', 'bumjung.com');
-	          ga('send', 'pageview');
-	        
-	        </script>
-	     <!-- =============================================================================================================== -->
-	     
+        <link href='http://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<div class="header skew">
-			<h2>Bumjung Kim</h2>
-			<label>Software Engineering '17</label>
-			<ul>
-				<li class="aboutMe active"><div class="arrow-right"></div><label>About Me</label></li>
-				<li class="experience"><div class="arrow-right"></div><label>Experiences</label></li>
-				<li class="projects"><div class="arrow-right"></div><label>Projects</label></li>
-			</ul>
-		</div>
+		<section class="mainContainer">
+			<section class="menu">
+				<div class="imageContainer1"></div>
+				<div class="imageContainer2 hide"></div>
+				<div class="navContainer">
+					<div class="name">Paul Kim</div>
+					<ul class="nav">
+						<li id="aboutMe" class="section active">About Me</li>
+						<li><span class="line"></span></li>
+						<li id="projects" class="section">Projects</li>
+						<li><span class="line"></span></li>
+						<li id="experiences" class="section">Experiences</li>
+					</ul>
+				</div>
+			</section>
+			<section class="contentContainer">
+				<div class="header">About Me</div>
+				<section class="aboutMe">
+					<div class="content">
+						<h3>THE POSSIBILITIES ARE ENDLESS ONCE WE ACT</h3>
+						<p class="float-left">
+						I am currently attending University of Waterloo and majoring in Software Engineering Co-op (currently in my second year). Software engineering is a systematic and disciplined approach to developing software. It applies both computer science and engineering principles and practices to the creation, process, and maintenance of software systems.
+						</p>
+						<p class="float-right">This website is designed to showcase me, as a person, student and as a professional. You are always welcome to contact me, let's chat!
+						</p>
+					</div>
+				</section>
+				<section class="projects hide">
+					<div class="content">
+						<div class="proj">
+							<h3>Steamize 2.0</h3>
+							<span class="tech">MongoDB, Express (NodeJS), AngularJS, Youtube API</span>
+							<p>Used NVD3.js to visualize raw data obtained from Steam API, a gaming platform with over 65 million users worldwide. Implemented multi-processing methodology to increase URL request performance.</p>
+						</div><!--
+						--><div class="proj float-right">
+							<h3>Qube</h3>
+							<span class="tech">MongoDB, Express (NodeJS), EJS, Steam API</span>
+							<p>Developed open-source full-stack application to enhance Youtube's playlist feature. Implemented REST API abstraction layer to handle MongoDB queries. Built internal analytics application to interpret user usage data.</p>
+						</div><!--
+						--><div class="proj">
+							<h3>Connect4</h3>
+							<span class="tech">Express (NodeJS), SocketIO, Jade</span>
+							<p>Implemented Socket.IO rooms to allow multiple games to be played simultaneously. Developed real-time chat system to enhance user experience.</p>
+						</div>
+					</div>
+				</section>
+				<section class="experiences hide">
+					<div class="content">
+						<div class="exp">
+							<h3>Software Engineer Intern <span class="company">@ HootSuite</span></h3>
+							<ul>
+								<li>Currently Employed</li>
+							</ul>
+						</div><!--
+						--><div class="exp">
+							<h3>Software Engineer Intern <span class="company">@ IBM</span></h3>
+							<ul>
+								<li>Coded and automated tests to provide UI and functional test coverage of Web and Eclipse-based platforms.</li>
+								<li>Led development of automation testing infrastructure for continuous delivery using layerarchitected, object-oriented frameworks.</li>
+								<li>Refined API to create interface layer for internal business logic implementation.</li>
+							</ul>
+						</div><!--
+						--><div class="exp">
+							<h3>Full-stack Developer Intern <span class="company">@ WatrHub</span></h3>
+							<ul>
+								<li>Developed Selenium tools for Watrhub, a data-mining and analytics startup company that provides market intelligence on water and wastewater systems, to collect publicly available water data documents.</li>
+								<li>Parsed government water datasets and restructured data for application's database using Python.</li>
+								<li>Built web-based database editor using Django, to efficiently speed up database workflow.</li>
+								<li>Developed dashboard for actionable sales data using NVD3.js, demoed at startup accelerator conference.</li>
+							</ul>
+						</div><!--
+						--><div class="exp">
+							<h3>Web Application Developer Intern <span class="company">@ Government</span></h3>
+							<ul>
+								<li>Built abstraction layer between database and internal event management application.</li>
+								<li>Implemented regression testing to maintain compatibility with all major web browsers.</li>
+								<li>Optimized site maintenance automation in Javascript using Regex.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</section>
+		</section>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="javascript/script.js" type="text/javascript"></script>
 	</body>
 </html>

@@ -1,76 +1,158 @@
 html,
 body {
   height: 100%;
+  background-color: #929fb2;
+  font-family: Catamaran;
 }
-body {
-  background-color: #1695a3;
-  font-family: Roboto;
+.float-right {
+  float: right;
 }
-body::before {
-  background-color: #ffffff;
-  content: " ";
-  height: 100%;
-  position: fixed;
-  width: 5%;
+.float-left {
+  float: left;
 }
-.arrow-right {
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #ED6743;
+.hide {
   display: none;
-  margin-right: 5px;
-  position: relative;
-  top: 1px;
 }
-.header {
+.mainContainer {
+  position: absolute;
+  width: 1200px;
+  height: 600px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  margin: -300px -600px;
+}
+.mainContainer .menu {
   height: 100%;
-  width: 25%;
-  padding: 5% 0% 10% 8%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  color: #333333;
+  width: 480px;
+  float: left;
 }
-.header.skew {
-  -webkit-transform: skew(-5deg);
-  transform: skewx(-5deg);
-  -webkit-box-shadow: 0 0 1px #ffffff;
-  -o-box-shadow: none;
+.mainContainer .menu .imageContainer1,
+.mainContainer .menu .imageContainer2 {
+  position: absolute;
+  height: 100%;
+  width: 480px;
+  background: url(../bg69.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.header h2,
-.header label {
-  -webkit-transform: skewx(5deg);
-  transform: skewx(5deg);
+.mainContainer .menu .imageContainer2 {
+  opacity: 0;
+  background-image: url(../bg23.jpg);
 }
-.header h2 {
-  font-size: 35px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-.header label {
-  font-size: 15px;
-  margin-left: 5px;
-}
-.header ul {
-  list-style: none;
+.mainContainer .menu .navContainer {
   position: relative;
+  background-color: #fff;
+  width: 180px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 999;
+}
+.mainContainer .menu .navContainer .name {
+  font-size: 25px;
+  padding: 85px 0 0 0;
+  color: #fff;
+  background-color: #1D1D1B;
+  height: 70px;
+  font-weight: bold;
+}
+.mainContainer .menu .navContainer .nav {
+  font-size: 15px;
+  padding: 10px 0;
+  list-style-type: none;
+  margin: 0;
+}
+.mainContainer .menu .navContainer .nav li {
+  margin: 20px 0;
+  cursor: pointer;
+}
+.mainContainer .menu .navContainer .nav li.active {
+  color: #6881b5;
+}
+.mainContainer .menu .navContainer .nav li .line {
+  display: block;
+  margin: 0 auto;
+  margin: 0 60px;
+  border-bottom: 1px solid #e7e6e6;
+}
+.mainContainer .contentContainer {
+  width: calc((100% -  480px ) - 60px);
+  height: calc(100% - 40px);
+  float: right;
+  padding: 20px 30px;
+}
+.mainContainer .contentContainer section {
+  position: relative;
+}
+.mainContainer .contentContainer .header {
   font-size: 20px;
-  margin-top: 55px;
-  margin-left: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 50px 0 0 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e7e6e6;
 }
-.header ul li {
-  padding: 15px 0 15px 0px;
-  width: 100%;
-  border-bottom: 2px solid #ffffff;
+.mainContainer .contentContainer .content {
+  position: relative;
+  padding: 30px 0 0 30px;
 }
-.header ul li.active .arrow-right {
+.mainContainer .contentContainer .aboutMe .content {
+  line-height: 22px;
+}
+.mainContainer .contentContainer .aboutMe .content h3 {
+  letter-spacing: 1px;
+  width: 250px;
+}
+.mainContainer .contentContainer .aboutMe .content p {
+  width: 300px;
+}
+.mainContainer .contentContainer .aboutMe .content,
+.mainContainer .contentContainer .experiences .content {
+  opacity: 0;
+  bottom: 50px;
+}
+.mainContainer .contentContainer .projects h3,
+.mainContainer .contentContainer .experiences h3 {
+  text-transform: uppercase;
+  margin: 0;
+}
+.mainContainer .contentContainer .projects h4,
+.mainContainer .contentContainer .experiences h4 {
+  margin: 0;
+}
+.mainContainer .contentContainer .projects .proj {
+  position: relative;
+  opacity: 0;
+  bottom: 30px;
   display: inline-block;
+  width: calc(50% - 30px);
 }
-.header ul li label {
-  padding: 0 0 0 15px;
-  font-size: 20px;
+.mainContainer .contentContainer .projects .proj .tech {
+  letter-spacing: 0.1px;
+  font-size: 13px;
+  color: #aaaaaa;
+}
+.mainContainer .contentContainer .projects .proj p {
+  font-size: 14px;
+}
+.mainContainer .contentContainer .experiences {
+  height: calc(100% - 110px);
+  overflow: hidden;
+}
+.mainContainer .contentContainer .experiences .content {
+  height: calc(100% - 30px);
+  overflow-y: auto;
+}
+.mainContainer .contentContainer .experiences .exp .company {
+  text-transform: none;
+  color: #aaaaaa;
+}
+.mainContainer .contentContainer .experiences .exp ul {
+  list-style-type: disc;
+}
+.mainContainer .contentContainer .experiences .exp ul li {
+  font-size: 14px;
 }

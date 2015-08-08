@@ -1,88 +1,193 @@
-@background: #1695A3;
-@header: #fff;
-@darkGrey: #333;
+@background: #929FB2;
+@line: #E7E6E6;
+@active: #6881B5;
+@fontGrey: #AAA;
+
+@mainHeight: 600px;
+@mainWidth: 1200px;
+@navContainerWidth: 180px;
+@nameHeight: 70px; 
+@menuWidth: 480px;
+
 html, body{
 	height:100%;
+	background-color: @background;
+	font-family: Catamaran;
 }
 
-body {
- 	background-color: @background;
- 	&::before {
-	  background-color: @header;
-	  content: " ";
-	  height: 100%;
-	  position: fixed;
-	  width: 5%;
-	}
-
-	font-family: Roboto;
+.float-right {
+	float: right;
 }
 
-.arrow-right {
-	width: 0; 
-	height: 0;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	border-left: 10px solid #ED6743;
+.float-left {
+	float: left;
+}
+
+.hide {
 	display: none;
-	margin-right:5px;
-	position:relative;
-	top: 1px;
 }
 
-.header {
-	&.skew{
-		  -webkit-transform: skew(-5deg);
-		  transform: skewx(-5deg);
-		  -webkit-box-shadow: 0 0 1px @header;
-		  -o-box-shadow: none;
+.mainContainer {
+	position: absolute;
+	width: @mainWidth;
+	height: @mainHeight;
+	background-color: #fff;
+	top: 50%;
+	left: 50%;
+	margin: (-@mainHeight/2) (-@mainWidth/2);
+
+	.menu {
+		height: 100%;
+		width: @menuWidth;
+		float: left;
+		.imageContainer1, .imageContainer2 {
+			position: absolute;
+			height: 100%;
+			width: @menuWidth;
+			background: url(../bg69.jpg) no-repeat center; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		.imageContainer2 {
+			opacity: 0;
+			background-image: url(../bg23.jpg)
+		}
+		.navContainer {
+			position: relative;
+			background-color: #fff;
+			width: @navContainerWidth;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			z-index: 999;
+
+			.name {
+				font-size: 25px;
+				padding: (@nameHeight/2 + 50) 0 0 0;
+				color: #fff;
+				background-color: #1D1D1B;
+				height: @nameHeight;
+				font-weight: bold;
+			}
+
+			.nav {
+				font-size:15px;
+				padding: 10px 0;
+			    list-style-type: none;
+			    margin: 0;
+
+				li {
+					margin: 20px 0;
+					cursor: pointer;
+
+					&.active {
+						color: @active;
+					}
+					.line {
+						display: block;
+						margin: 0 auto;
+						margin: 0 60px;
+						border-bottom: 1px solid @line;
+					}
+				}
+			}
+		}
 	}
 
-	h2, label{
-		-webkit-transform: skewx(5deg);
-	    transform: skewx(5deg);
+	.contentContainer {
+		width: calc(~"(100% - "@menuWidth~") - 60px");
+		height: calc(~"100% - 40px");
+		float: right;
+		padding: 20px 30px;
+
+		section {
+			position: relative;
+		}
+
+		.header {
+			font-size: 20px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			margin: 50px 0 0 0;
+			padding-bottom: 20px;
+			border-bottom: 1px solid @line;
+		}
+		.content {
+			position: relative;
+			padding: 30px 0 0 30px;
+		}
+		.aboutMe {
+			.content {
+				line-height: 22px;
+
+				h3 {
+					letter-spacing: 1px;
+					width: 250px;
+				}
+				p {
+					width: 300px;
+				}
+			}
+		}
+
+		.aboutMe .content, .experiences .content{
+			opacity: 0;
+			bottom: 50px;
+		}
+
+		.projects, .experiences {
+			h3{
+				text-transform: uppercase;
+				margin: 0;
+			}
+			h4 {
+				margin: 0;
+			}
+		}
+
+		.projects {
+			.proj {
+				position: relative;
+				opacity: 0;
+				bottom: 30px;
+				display: inline-block;
+				width: calc(~"50% - 30px");
+
+				.tech {
+					letter-spacing: 0.1px;
+					font-size:13px;
+					color: @fontGrey; 
+				}
+				p {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.experiences {
+			height: calc(~"100% - 110px"); // (50 + 20) + (20 + 20)
+			overflow: hidden;
+
+			.content {
+				height: calc(~"100% - 30px");
+				overflow-y: auto;
+			}
+			.exp {
+				.company {
+					text-transform: none;
+					color: @fontGrey;
+				}
+
+				ul {
+    				list-style-type: disc;
+
+					li {
+						font-size: 14px;
+					}
+				}
+			}
+		}
 	}
-
-	h2 {
-  		font-size: 35px;
-  		letter-spacing: 2px;
-  		text-transform: uppercase;
-  		margin-bottom:0;
-	}
-
-	label {
-		font-size:15px;
-		margin-left:5px;
-	}
-
-	ul{
-	    li {
-	    	&.active .arrow-right {
-	    		display: inline-block;
-	    	}
-	    	label {
-	    		padding: 0 0 0 15px;
-	    		font-size:20px;
-	    	}
-
-	    	padding:15px 0 15px 0px;
-	    	width:100%;
-	    	border-bottom:2px solid @header;
-	    }
-	    list-style: none;
-	    position:relative;
-	    font-size:20px;
-	    margin-top:55px;
-	    margin-left:30px;
-	}
-
-	height: 100%;
-	width: 25%;
-  	padding: 5% 0% 10% 8%;
-  	position: fixed;
-  	top: 0;
-  	left: 0;
-  	background-color:@header;
-  	color: @darkGrey;
 }
-
