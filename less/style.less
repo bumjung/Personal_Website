@@ -3,8 +3,8 @@
 @active: #6881B5;
 @fontGrey: #AAA;
 
-@mainHeight: 600px;
-@mainWidth: 1200px;
+@mainHeight: 100%;
+@mainWidth: 100%;
 @navContainerWidth: 180px;
 @nameHeight: 70px; 
 @menuWidth: 480px;
@@ -32,9 +32,6 @@ html, body{
 	width: @mainWidth;
 	height: @mainHeight;
 	background-color: #fff;
-	top: 50%;
-	left: 50%;
-	margin: (-@mainHeight/2) (-@mainWidth/2);
 
 	.menu {
 		height: 100%;
@@ -122,20 +119,45 @@ html, body{
 			.content {
 				line-height: 22px;
 
-				h3 {
-					letter-spacing: 1px;
-					width: 50%;
+				.bio {
+					position: relative;
+					h3 {
+						position: relative;
+						opacity: 0;
+						bottom: 30px;
+						letter-spacing: 1px;
+						width: 50%;
+					}
+					p {
+						position: relative;
+						opacity: 0;
+						bottom: 30px;
+						opacity: 0;
+						bottom: 30px;
+						display: inline-block;
+						width: 45%;
+					}
 				}
-				p {
-					display: inline-block;
-					width: 45%;
+
+				.contact {
+					position: relative;
+					opacity: 0;
+					bottom: 30px;
+					margin:20px 0 0 55%;
+
+					ul {
+						border-left: 3px solid @line;
+						list-style-type: none;
+					}
+
+					a {
+						display: block;
+						color: #000;
+						padding:1px;
+						text-decoration: none;
+					}
 				}
 			}
-		}
-
-		.aboutMe .content, .experiences .content{
-			opacity: 0;
-			bottom: 50px;
 		}
 
 		.projects, .experiences {
@@ -172,6 +194,8 @@ html, body{
 			overflow: hidden;
 
 			.content {
+				opacity: 0;
+				bottom: 50px;
 				height: calc(~"100% - 30px");
 				overflow-y: auto;
 			}

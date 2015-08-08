@@ -15,7 +15,12 @@ $(document).ready(function(){
 
 	var fadeInMap = {
 		'aboutMe' : function () {
-			$('.aboutMe .content')
+			$('.aboutMe .content').css({ opacity: 1, bottom: 0});
+			$('.aboutMe .bio h3').css({ opacity: 0, bottom: 30});
+			$('.aboutMe .bio p').css({ opacity: 0, bottom: 30});
+			$('.aboutMe .contact').css({ opacity: 0, bottom: 30});
+			
+			$('.aboutMe .bio h3')
 				.animate({
 					opacity: 1
 				}, {
@@ -27,6 +32,36 @@ $(document).ready(function(){
 				}, {
 					duration: 600
 				});
+
+			setTimeout(function () {
+				$('.aboutMe .bio p')
+					.animate({
+						opacity: 1
+					}, {
+						queue: false,
+						duration: 750
+					})
+					.animate({
+						bottom: 0
+					}, {
+						duration: 600
+					});
+			},300);
+
+			setTimeout(function () {
+				$('.aboutMe .contact')
+					.animate({
+						opacity: 1
+					}, {
+						queue: false,
+						duration: 750
+					})
+					.animate({
+						bottom: 0
+					}, {
+						duration: 600
+					});
+			},600);
 		},
 		'projects' : function () {
 			$('.projects .content').css({ opacity: 1, bottom: 0});
