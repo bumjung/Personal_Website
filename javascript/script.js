@@ -20,47 +20,14 @@ $(document).ready(function(){
 			$('.aboutMe .bio p').css({ opacity: 0, bottom: 30});
 			$('.aboutMe .contact').css({ opacity: 0, bottom: 30});
 			
-			$('.aboutMe .bio h3')
-				.animate({
-					opacity: 1
-				}, {
-					queue: false,
-					duration: 750
-				})
-				.animate({
-					bottom: 0
-				}, {
-					duration: 600
-				});
+			animateFadeAndMove('.aboutMe .bio h3', 1, 750, 0, 600);
 
 			setTimeout(function () {
-				$('.aboutMe .bio p')
-					.animate({
-						opacity: 1
-					}, {
-						queue: false,
-						duration: 750
-					})
-					.animate({
-						bottom: 0
-					}, {
-						duration: 600
-					});
+				animateFadeAndMove('.aboutMe .bio p', 1, 750, 0, 600);
 			},300);
 
 			setTimeout(function () {
-				$('.aboutMe .contact')
-					.animate({
-						opacity: 1
-					}, {
-						queue: false,
-						duration: 750
-					})
-					.animate({
-						bottom: 0
-					}, {
-						duration: 600
-					});
+				animateFadeAndMove('.aboutMe .contact', 1, 750, 0, 600);
 			},600);
 		},
 		'projects' : function () {
@@ -87,18 +54,7 @@ $(document).ready(function(){
 			}
 		},
 		'experiences' : function () {
-			$('.experiences .content')
-				.animate({
-					opacity: 1
-				}, {
-					queue: false,
-					duration: 700
-				})
-				.animate({
-					bottom: 0
-				}, {
-					duration: 500
-				});
+			animateFadeAndMove('.experiences .content', 1, 700, 0, 500);
 		}
 	}
 
@@ -106,7 +62,6 @@ $(document).ready(function(){
 		return v;
 	});
 
-	console.log(imgArr);
 	preload(imgArr);
 
 	fadeInMap['aboutMe']();
@@ -121,20 +76,15 @@ $(document).ready(function(){
 			
 			$('.contentContainer .header').text(sectionMap[newSection]);
 
+			if(newSection == "aboutMe") {
+				$('.contentContainer .header').css('visibility', 'hidden');
+			} else {
+				$('.contentContainer .header').css('visibility', 'visible');
+			}
+
 			handleImageLoading(imageMap, newSection);
 
-			$('.'+ oldSection +' .content')
-				.animate({
-					opacity: 0
-				}, {
-					queue: false,
-					duration: 400
-				})
-				.animate({
-					bottom: 50
-				}, {
-					duration: 700
-				})
+			animateFadeAndMove('.'+ oldSection +' .content', 0, 400, 50, 700)
 				.promise().done(function() {
 					$('.'+oldSection).addClass('hide');
 					$('.'+newSection).removeClass('hide');
@@ -144,6 +94,21 @@ $(document).ready(function(){
 		}
 	});
 });
+
+function animateFadeAndMove(id, opacity, startDuration, bottom, endDuration) {
+	return $(id)
+		.animate({
+			opacity: opacity
+		}, {
+			queue: false,
+			duration: startDuration
+		})
+		.animate({
+			bottom: bottom
+		}, {
+			duration: endDuration
+		});
+}
 
 function handleImageLoading(imageMap, newSection) {
 	// imageContainer1 is hidden... show imageContainer1, hide imageContainer2

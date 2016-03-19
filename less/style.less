@@ -60,7 +60,7 @@ html, body{
 			letter-spacing: 1px;
 			z-index: 999;
 
-			.name {
+			.name h1 {
 				font-size: 25px;
 				padding: (@nameHeight/2 + 50) 0 0 0;
 				color: #fff;
@@ -110,6 +110,7 @@ html, body{
 			margin: 50px 0 0 0;
 			padding-bottom: 20px;
 			border-bottom: 1px solid @line;
+			visibility: hidden;
 		}
 		.content {
 			position: relative;
@@ -117,44 +118,25 @@ html, body{
 		}
 		.aboutMe {
 			.content {
+				margin-top: 13%;
 				line-height: 22px;
 
 				.bio {
 					position: relative;
 					h3 {
 						position: relative;
+						height:50%;
 						opacity: 0;
 						bottom: 30px;
 						letter-spacing: 1px;
-						width: 50%;
+					    text-align: center;
+					    font-size: 58px;
 					}
 					p {
 						position: relative;
 						opacity: 0;
 						bottom: 30px;
-						opacity: 0;
-						bottom: 30px;
-						display: inline-block;
-						width: 45%;
-					}
-				}
-
-				.contact {
-					position: relative;
-					opacity: 0;
-					bottom: 30px;
-					margin:20px 0 0 55%;
-
-					ul {
-						border-left: 3px solid @line;
-						list-style-type: none;
-					}
-
-					a {
-						display: block;
-						color: #000;
-						padding:1px;
-						text-decoration: none;
+					    text-align: center;
 					}
 				}
 			}
@@ -171,6 +153,14 @@ html, body{
 		}
 
 		.projects {
+			height: calc(~"100% - 110px");
+			overflow: hidden;
+
+			.content {
+				height: calc(~"100% - 30px");
+				overflow-y: auto;
+			}
+
 			.proj {
 				position: relative;
 				opacity: 0;
@@ -178,14 +168,26 @@ html, body{
 				display: inline-block;
 				width: calc(~"50% - 30px");
 				margin: 20px 0 0 0;
+
 				.tech {
 					letter-spacing: 0.1px;
 					font-size:13px;
 					color: @fontGrey; 
 				}
+				.links a {
+					color: #4183D7;
+					font-size:13px;
+				}
 				p {
 					font-size: 14px;
 				}
+				h3.noTransform {
+					text-transform: none;
+				}
+			}
+			.proj:nth-child(1) {
+				float:left;
+				margin-right:50px;
 			}
 		}
 
