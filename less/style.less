@@ -9,6 +9,78 @@
 @nameHeight: 70px;
 @menuWidth: 480px;
 
+@media (max-width: 400px) {}
+
+/* Phablet */
+@media (max-width: 550px) {}
+
+/* Tablet */
+@media (max-width: 750px) {}
+
+@media (max-width: 950px) {
+		section.mainContainer {
+			.menu {
+				display: none;
+			}
+
+			.navContainer {
+				width: 100%;
+
+				.name {
+					h1 {
+						.menuIcon {
+							margin-right: 25px;
+							font-size: 17px;
+							display: inline;
+							cursor: pointer;
+						}
+
+						font-size: 16px;
+						padding: 15px;
+						text-align: left;
+						height: auto;
+					}
+				}
+				.nav {
+					display: none;
+					position:absolute;
+					width: 150px;
+					padding: 0;
+					background-color: #333;
+					color: #aaa;
+
+					.lineContainer {
+						display: none;
+					}
+
+					li {
+						border-top: 1px solid #222;
+						margin: 0;
+						padding: 20px 0;
+
+						&:first-child { border-top: none; }
+
+						&.active {
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.contentContainer {
+				width: calc(~"100% - 60px");
+				height: calc(~"100% - 100px");
+				margin-top: 60px;
+			}
+		}
+}
+
+@media (min-width: 950px) {
+	.menuIcon {
+		display: none;
+	}
+}
+
 html, body{
 	height:100%;
 	background-color: @background;
@@ -51,43 +123,46 @@ html, body{
 			opacity: 0;
 			background-image: url(../bg23.jpg)
 		}
-		.navContainer {
-			position: relative;
-			background-color: #fff;
-			width: @navContainerWidth;
-			text-align: center;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			z-index: 999;
+	}
 
-			.name h1 {
-				font-size: 25px;
-				padding: (@nameHeight/2 + 50) 0 0 0;
-				color: #fff;
-				background-color: #1D1D1B;
-				height: @nameHeight;
-				font-weight: bold;
-			}
+	.navContainer {
+		position: absolute;
+		background-color: #fff;
+		width: @navContainerWidth;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		z-index: 999;
+		margin: 16px 0;
 
-			.nav {
-				font-size:15px;
-				padding: 10px 0;
-			    list-style-type: none;
-			    margin: 0;
+		.name h1 {
+			font-size: 25px;
+			padding: (@nameHeight/2 + 50) 0 0 0;
+			color: #fff;
+			background-color: #1D1D1B;
+			height: @nameHeight;
+			font-weight: bold;
+			margin: 0;
+		}
 
-				li {
-					margin: 20px 0;
-					cursor: pointer;
+		.nav {
+			font-size:15px;
+			padding: 10px 0;
+				list-style-type: none;
+				margin: 0;
 
-					&.active {
-						color: @active;
-					}
-					.line {
-						display: block;
-						margin: 0 auto;
-						margin: 0 60px;
-						border-bottom: 1px solid @line;
-					}
+			li {
+				margin: 20px 0;
+				cursor: pointer;
+
+				&.active {
+					color: @active;
+				}
+				.line {
+					display: block;
+					margin: 0 auto;
+					margin: 0 60px;
+					border-bottom: 1px solid @line;
 				}
 			}
 		}
@@ -203,8 +278,10 @@ html, body{
 			}
 			.exp {
 				.company {
+					display: block;
 					text-transform: none;
-					color: @fontGrey;
+					color: #8a8a8a;
+					font-size: 15px;
 				}
 
 				ul {

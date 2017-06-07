@@ -19,7 +19,7 @@ $(document).ready(function(){
 			$('.aboutMe .bio h3').css({ opacity: 0, bottom: 30});
 			$('.aboutMe .bio p').css({ opacity: 0, bottom: 30});
 			$('.aboutMe .contact').css({ opacity: 0, bottom: 30});
-			
+
 			animateFadeAndMove('.aboutMe .bio h3', 1, 750, 0, 600);
 
 			setTimeout(function () {
@@ -73,7 +73,7 @@ $(document).ready(function(){
 		if (oldSection !== newSection) {
 			$('#'+newSection).addClass('active');
 			$('#'+oldSection).removeClass('active');
-			
+
 			$('.contentContainer .header').text(sectionMap[newSection]);
 
 			if(newSection == "aboutMe") {
@@ -93,6 +93,21 @@ $(document).ready(function(){
 				});
 		}
 	});
+
+	$('.menuIcon').on('click', function (){
+		$('.nav').toggle();
+	});
+	
+	if($('.menuIcon').css('display') !== 'none') {
+		var arrList = $('.nav > li');
+		for(var i = 0; i < arrList.length; i++) {
+			if($(arrList[i]).hasClass('lineContainer')) continue;
+			console.log(arrList[i]);
+			$(arrList[i]).on('click', function (){
+				$('.nav').toggle();
+			});
+		}
+	}
 });
 
 function animateFadeAndMove(id, opacity, startDuration, bottom, endDuration) {
@@ -142,4 +157,3 @@ function preload(arrayOfImages) {
         $('<img/>')[0].src = this;
     });
 }
-

@@ -1,3 +1,57 @@
+/* Phablet */
+/* Tablet */
+@media (max-width: 950px) {
+  section.mainContainer .menu {
+    display: none;
+  }
+  section.mainContainer .navContainer {
+    width: 100%;
+  }
+  section.mainContainer .navContainer .name h1 {
+    font-size: 16px;
+    padding: 15px;
+    text-align: left;
+    height: auto;
+  }
+  section.mainContainer .navContainer .name h1 .menuIcon {
+    margin-right: 25px;
+    font-size: 17px;
+    display: inline;
+    cursor: pointer;
+  }
+  section.mainContainer .navContainer .nav {
+    display: none;
+    position: absolute;
+    width: 150px;
+    padding: 0;
+    background-color: #333;
+    color: #aaa;
+  }
+  section.mainContainer .navContainer .nav .lineContainer {
+    display: none;
+  }
+  section.mainContainer .navContainer .nav li {
+    border-top: 1px solid #222;
+    margin: 0;
+    padding: 20px 0;
+  }
+  section.mainContainer .navContainer .nav li:first-child {
+    border-top: none;
+  }
+  section.mainContainer .navContainer .nav li.active {
+    color: #fff;
+  }
+  section.mainContainer .contentContainer {
+    width: calc(100% - 60px);
+    height: calc(100% - 100px);
+    margin-top: 60px;
+  }
+}
+@media (min-width: 950px) {
+  .menuIcon {
+    display: none;
+  }
+}
 html,
 body {
   height: 100%;
@@ -39,37 +93,39 @@ body {
   opacity: 0;
   background-image: url(../bg23.jpg);
 }
-.mainContainer .menu .navContainer {
-  position: relative;
+.mainContainer .navContainer {
+  position: absolute;
   background-color: #fff;
   width: 180px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 999;
+  margin: 16px 0;
 }
-.mainContainer .menu .navContainer .name h1 {
+.mainContainer .navContainer .name h1 {
   font-size: 25px;
   padding: 85px 0 0 0;
   color: #fff;
   background-color: #1D1D1B;
   height: 70px;
   font-weight: bold;
+  margin: 0;
 }
-.mainContainer .menu .navContainer .nav {
+.mainContainer .navContainer .nav {
   font-size: 15px;
   padding: 10px 0;
   list-style-type: none;
   margin: 0;
 }
-.mainContainer .menu .navContainer .nav li {
+.mainContainer .navContainer .nav li {
   margin: 20px 0;
   cursor: pointer;
 }
-.mainContainer .menu .navContainer .nav li.active {
+.mainContainer .navContainer .nav li.active {
   color: #6881b5;
 }
-.mainContainer .menu .navContainer .nav li .line {
+.mainContainer .navContainer .nav li .line {
   display: block;
   margin: 0 auto;
   margin: 0 60px;
@@ -174,8 +230,10 @@ body {
   overflow-y: auto;
 }
 .mainContainer .contentContainer .experiences .exp .company {
+  display: block;
   text-transform: none;
-  color: #aaaaaa;
+  color: #8a8a8a;
+  font-size: 15px;
 }
 .mainContainer .contentContainer .experiences .exp ul {
   list-style-type: disc;
