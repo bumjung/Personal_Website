@@ -97,12 +97,12 @@ $(document).ready(function(){
 	$('.menuIcon').on('click', function (){
 		$('.nav').toggle();
 	});
-	
+
 	if($('.menuIcon').css('display') !== 'none') {
 		var arrList = $('.nav > li');
 		for(var i = 0; i < arrList.length; i++) {
 			if($(arrList[i]).hasClass('lineContainer')) continue;
-			console.log(arrList[i]);
+			
 			$(arrList[i]).on('click', function (){
 				$('.nav').toggle();
 			});

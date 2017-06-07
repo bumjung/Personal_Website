@@ -9,7 +9,11 @@
 @nameHeight: 70px;
 @menuWidth: 480px;
 
-@media (max-width: 400px) {}
+@media (max-width: 400px) {
+	section.mainContainer .contentContainer .aboutMe .content .bio h3 {
+		font-size: 40px;
+	}
+}
 
 /* Phablet */
 @media (max-width: 550px) {}
@@ -25,6 +29,7 @@
 
 			.navContainer {
 				width: 100%;
+				margin: 0;
 
 				.name {
 					h1 {
@@ -69,8 +74,40 @@
 
 			.contentContainer {
 				width: calc(~"100% - 60px");
-				height: calc(~"100% - 100px");
+				height: auto;
 				margin-top: 60px;
+
+				.header {
+					margin: 0;
+					padding: 0;
+				}
+
+				.aboutMe .content {
+					padding: 20px 0 0 0;
+				}
+
+				.aboutMe .content .bio {
+					padding: 0;
+				}
+
+				.experiences {
+					height: auto;
+				}
+
+				.projects {
+
+					.content {
+						padding: 20px 0 0 0;
+					}
+
+					.proj {
+						width: 100%;
+						display: block;
+						padding: 10px 0 0 0;
+						margin: 0;
+						float: left;
+					}
+				}
 			}
 		}
 }
@@ -83,7 +120,7 @@
 
 html, body{
 	height:100%;
-	background-color: @background;
+	background-color: #fff;
 	font-family: Catamaran;
 }
 
@@ -198,6 +235,8 @@ html, body{
 
 				.bio {
 					position: relative;
+					padding-top: 50px;
+
 					h3 {
 						position: relative;
 						height:50%;

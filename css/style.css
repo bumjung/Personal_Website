@@ -1,3 +1,8 @@
+@media (max-width: 400px) {
+  section.mainContainer .contentContainer .aboutMe .content .bio h3 {
+    font-size: 40px;
+  }
+}
 /* Phablet */
 /* Tablet */
 @media (max-width: 950px) {
@@ -6,6 +11,7 @@
   }
   section.mainContainer .navContainer {
     width: 100%;
+    margin: 0;
   }
   section.mainContainer .navContainer .name h1 {
     font-size: 16px;
@@ -43,8 +49,31 @@
   }
   section.mainContainer .contentContainer {
     width: calc(100% - 60px);
-    height: calc(100% - 100px);
+    height: auto;
     margin-top: 60px;
+  }
+  section.mainContainer .contentContainer .header {
+    margin: 0;
+    padding: 0;
+  }
+  section.mainContainer .contentContainer .aboutMe .content {
+    padding: 20px 0 0 0;
+  }
+  section.mainContainer .contentContainer .aboutMe .content .bio {
+    padding: 0;
+  }
+  section.mainContainer .contentContainer .experiences {
+    height: auto;
+  }
+  section.mainContainer .contentContainer .projects .content {
+    padding: 20px 0 0 0;
+  }
+  section.mainContainer .contentContainer .projects .proj {
+    width: 100%;
+    display: block;
+    padding: 10px 0 0 0;
+    margin: 0;
+    float: left;
   }
 }
 @media (min-width: 950px) {
@@ -55,7 +84,7 @@
 html,
 body {
   height: 100%;
-  background-color: #929fb2;
+  background-color: #fff;
   font-family: Catamaran;
 }
 .float-right {
@@ -159,6 +188,7 @@ body {
 }
 .mainContainer .contentContainer .aboutMe .content .bio {
   position: relative;
+  padding-top: 50px;
 }
 .mainContainer .contentContainer .aboutMe .content .bio h3 {
   position: relative;
