@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  background-color: #929FB2;
+  background-color: #929fb2;
   font-family: Catamaran;
 }
 .float-right {
@@ -67,13 +67,13 @@ body {
   cursor: pointer;
 }
 .mainContainer .menu .navContainer .nav li.active {
-  color: #6881B5;
+  color: #6881b5;
 }
 .mainContainer .menu .navContainer .nav li .line {
   display: block;
   margin: 0 auto;
   margin: 0 60px;
-  border-bottom: 1px solid #E7E6E6;
+  border-bottom: 1px solid #e7e6e6;
 }
 .mainContainer .contentContainer {
   width: calc((100% -  480px ) - 60px);
@@ -90,7 +90,7 @@ body {
   letter-spacing: 3px;
   margin: 50px 0 0 0;
   padding-bottom: 20px;
-  border-bottom: 1px solid #E7E6E6;
+  border-bottom: 1px solid #e7e6e6;
   visibility: hidden;
 }
 .mainContainer .contentContainer .content {
@@ -98,7 +98,7 @@ body {
   padding: 30px 0 0 30px;
 }
 .mainContainer .contentContainer .aboutMe .content {
-  margin-top: 13%;
+  margin-top: 50px;
   line-height: 22px;
 }
 .mainContainer .contentContainer .aboutMe .content .bio {
@@ -147,7 +147,7 @@ body {
 .mainContainer .contentContainer .projects .proj .tech {
   letter-spacing: 0.1px;
   font-size: 13px;
-  color: #AAA;
+  color: #aaaaaa;
 }
 .mainContainer .contentContainer .projects .proj .links a {
   color: #4183D7;
@@ -175,7 +175,7 @@ body {
 }
 .mainContainer .contentContainer .experiences .exp .company {
   text-transform: none;
-  color: #AAA;
+  color: #aaaaaa;
 }
 .mainContainer .contentContainer .experiences .exp ul {
   list-style-type: disc;
