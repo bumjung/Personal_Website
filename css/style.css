@@ -56,11 +56,12 @@
     margin: 0;
     padding: 0;
   }
-  section.mainContainer .contentContainer .aboutMe .content {
-    padding: 20px 0 0 0;
-  }
   section.mainContainer .contentContainer .aboutMe .content .bio {
     padding: 0;
+  }
+  section.mainContainer .contentContainer .aboutMe .content,
+  section.mainContainer .contentContainer .experiences .content {
+    padding: 20px 0 0 0;
   }
   section.mainContainer .contentContainer .experiences {
     height: auto;
@@ -262,8 +263,9 @@ body {
 .mainContainer .contentContainer .experiences .exp .company {
   display: block;
   text-transform: none;
-  color: #8a8a8a;
-  font-size: 15px;
+  letter-spacing: 0.1px;
+  font-size: 13px;
+  color: #aaaaaa;
 }
 .mainContainer .contentContainer .experiences .exp ul {
   list-style-type: disc;
